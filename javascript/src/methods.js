@@ -46,7 +46,7 @@ function addPopups(args) {
     const lngLat = Object.values(e.lngLat);
     const feature = e.features[0];
     const content = render(args.popup, feature.properties);
-    new mapboxgl.Popup()
+    new mapboxgl.Popup({className: args.class})
       .setLngLat(lngLat)
       .setHTML(content)
       .addTo(map);
@@ -59,6 +59,7 @@ function addTooltips(args) {
   const map = this;
   const layerId = args.layerId;
   const popup = new mapboxgl.Popup({
+    className: args.class,
     closeButton: false,
     closeOnClick: false
   });

@@ -4,7 +4,7 @@
 \alias{add_popups}
 \title{Add popups to a layer}
 \usage{
-add_popups(map, layer_id, popup)
+add_popups(map, layer_id, popup, class)
 }
 \arguments{
 \item{map}{A \link{mapboxer} object.}
@@ -13,6 +13,8 @@ add_popups(map, layer_id, popup)
 
 \item{popup}{A \href{https://github.com/janl/mustache.js}{mustache} template
 in which the tags refer to the properties of the layer's data object.}
+
+\item{class}{Additional CSS class(es) to be added to the popup.}
 }
 \description{
 Usually you will add the popups in the \link{add_layer} function by setting the \code{popup}

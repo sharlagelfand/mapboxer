@@ -4,7 +4,7 @@
 \alias{add_tooltips}
 \title{Add tooltips to a layer}
 \usage{
-add_tooltips(map, layer_id, tooltip)
+add_tooltips(map, layer_id, tooltip, class)
 }
 \arguments{
 \item{map}{A \link{mapboxer} object.}
@@ -13,6 +13,8 @@ add_tooltips(map, layer_id, tooltip)
 
 \item{tooltip}{A \href{https://github.com/janl/mustache.js}{mustache} template
 in which the tags refer to the properties of the layer's data object.}
+
+\item{class}{Additional CSS class(es) to be added to the popup.}
 }
 \description{
 Add tooltips to a layer
