@@ -31,7 +31,7 @@ add_layer <- function(map, style, popup = NULL) {
 #' @param class Additional CSS class(es) to be added to the popup.
 #' @example examples/api-reference/popups.R
 #' @export
-add_popups <- function(map, layer_id, popup, class) {
+add_popups <- function(map, layer_id, popup, class = "") {
   invoke_method(map, "addPopups", layerId = layer_id, popup = popup, class = class)
 }
 
